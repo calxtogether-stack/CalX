@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "CalX",
+    "slug": "calx-vault",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "calx",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.calx.vault",
+      "permissions": [
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "RECORD_AUDIO",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.calx.vault",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Authenticate to unlock your private vault",
+        "NSMicrophoneUsageDescription": "Record encrypted voice messages"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow CalX to verify your identity using biometrics."
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}

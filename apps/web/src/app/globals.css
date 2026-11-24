@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #fafafa;
+  --bg-secondary: #f2f2f3;
+  --bg-elevated: #ffffff;
+  --bg-muted: #e8e8ea;
+  --text-primary: #0a0a0b;
+  --text-secondary: #52525b;
+  --text-tertiary: #8a8a93;
+  --border-subtle: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --accent: #18181b;
+  --accent-fg: #fafafa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #09090b;
+    --bg-secondary: #111113;
+    --bg-elevated: #18181b;
+    --bg-muted: #222226;
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+    --text-tertiary: #71717a;
+    --border-subtle: #232327;
+    --border-strong: #34343a;
+    --accent: #fafafa;
+    --accent-fg: #09090b;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
